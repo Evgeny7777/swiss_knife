@@ -146,7 +146,12 @@ class Orchestrator:
                 rename(join(folder, fn), join(folder, new_folder_name))
                 print(f'renamed {fn} to {new_folder_name}')
 
+    def rename_hydra_csv(self, folder):
+        """
+        sample of file name is candles_TimeFrameCandle_00_01_00_SI-9.19@FORTS_2019_03_07_2020_04_06.csv
+        """
+        pass
 
 if __name__ == "__main__":
-    # fire.Fire(Orchestrator)
-    Orchestrator().rename_folders_long2short('./test')
+    fire.Fire(Orchestrator)
+    # Orchestrator().rename_folders_long2short('./test')
